@@ -50,40 +50,41 @@ async function handleDelete(event){
     }
   return (
     <div className="App">
-      <div className="custom-table">
-        <h1 id="title">Show Profile</h1>
-<Table striped bordered hover variant="light">
-  <thead className="thead-dark">
-    <tr>
-      
-      <th>User</th>
-      <th>Gender</th>
-      <th>Age</th>
-      <th>City</th>
-      <th>Delete</th>
-      <th>Edit</th>
+      <div className="custom-form">
+        <h1 id="title">My Profile</h1>
+         <div className="custom-input">
 
-    </tr>
-  </thead>
-
-  <tbody>
+  
+    
+    
+   
+  
   {profiles.map(item =>(
     
-    <tr>
+    
       
-      <td>{item.user}</td>
-      <td>{item.gender}</td>
-      <td>{item.age}</td>
-      <td>{item.city}</td>
-     <td><button className="btn btn-primary" value={item._id} onClick={handleDelete}>Delete</button></td>
-      <td><button className="btn btn-primary" value={item._id} ><a id="buttonLink" href={'/profiles/editprofile/'+item._id}>Edit</a></button></td>
-    </tr>
+
+    <div>
+      <div className="custom-input-field" style={{background: "none", fontSize: "25px", height: "0.75vw"}} ><span>{item.user}</span></div>
+      <div className="custom-input-field" style={{background: "none", fontSize: "25px", height: "0.75vw"}} ><span>{item.gender}</span></div>
+      <div className="custom-input-field" style={{background: "none", fontSize: "25px", height: "0.75vw"}}><span>{item.age}</span> years old</div>
+      <div className="custom-input-field" style={{background: "none", fontSize: "25px", height: "0.75vw"}} ><span>{item.city}</span></div>   
+
+
+
+     <div className="container-login100-form-btn">
+     <button className="login100-form-btn"style={{width: "150px"}} value={item._id} onClick={handleDelete}>Delete</button>
+     </div>
+     <div className="container-login100-form-btn" style={{marginTop: "20px"}}>
+      <button className="login100-form-btn" style={{width: "150px"}} value={item._id} ><a id="buttonLink" href={'/profiles/editprofile/'+item._id}>Edit</a></button>
+      </div>
+    </div>
+    
     ))} 
-  </tbody>
-</Table>
+  
 
           </div>               
-              
+         </div>     
     </div>
   );
 }

@@ -31,3 +31,7 @@ input[type="submit"]{
   align-items: center;
   list-style: none;
 } */
+
+a {
+  color: inherit;
+}

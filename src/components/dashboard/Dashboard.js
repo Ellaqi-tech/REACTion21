@@ -22,7 +22,7 @@ class Dashboard extends Component {
                 <b>Hey there,</b> {user.name.split(" ")[0]}
                 <p className="slogan">
                   Welcome to REACTion{" "}
-                  <span style={{ fontFamily: "monospace" }}>21</span> App 
+                  <span style={{ fontFamily: "monospace" }}>21</span> App 👏
                 </p>
                 <p className="slogan2">
                 With REACTion21 you can create and customize your workouts and keep your training on track!
@@ -30,7 +30,7 @@ class Dashboard extends Component {
                 we need to get to know you a little better.</p>
                 <p className="slogan2">Let's start now!</p>
               </h4>
-              <div style={{margin:"2vw auto"}} className="container-login100-form-btn">
+              <div style={{margin:"1vw auto"}} className="container-login100-form-btn">
               <Link
                 to="/profiles"
                 style={{
@@ -42,7 +42,22 @@ class Dashboard extends Component {
               >
                 Create Profile
               </Link>
-            </div>
+              </div>
+              <div style={{margin:"1vw auto"}} className="container-login100-form-btn">
+              <Link
+                to="/showprofile"
+                style={{
+                  width: "140px",
+                  borderRadius: "3px",
+                  letterSpacing: "1.5px"
+                }}
+                className="login100-form-btn"
+              >
+                Manage Profile
+              </Link>
+              </div>
+
+
               <div className="container-login100-form-btn">
                 <button
                   style={{

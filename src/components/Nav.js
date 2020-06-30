@@ -23,9 +23,7 @@ function Nav() {
 
          <aside> 
             <ul className="nav-links">  
-            <Link to="/showprofile">
-               <li><div className="linktitle">Manage Profile</div></li>
-            </Link>   
+            
             <Link to="/exercises">
                <li><div className="linktitle">Add Exercise</div></li>
             </Link>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import jwt_decode from "jwt-decode";
+import { Redirect } from 'react-router-dom';
 
 
 
@@ -21,8 +22,8 @@ name = decoded.name;
 class EditWorkout extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {title: ''};
-      this.state = {length: ''};
+      this.state = {title: '', length: '', flag: false};
+      
       
     //   this.state = {data: []};
         
@@ -69,8 +70,8 @@ class EditWorkout extends React.Component {
 
     //   this.setState({title: ''});     
     //   this.setState({length: ''});  
-      window.location.href = "/showworkouts";  
-      
+      // window.location.href = "/showworkouts";  
+      this.setState({flag: true});
     }
     
     render() {
@@ -84,7 +85,8 @@ class EditWorkout extends React.Component {
           <label>Duration</label>
             <input className="custom-input-field" type="text" value={this.state.length}  onChange={this.handleChangeLength} />
           <input className="btn btn-primary" type="submit" value="Submit" />
-        </form>        
+        </form>  
+        {this.state.flag && (<Redirect to={'/showworkouts'}/>) }      
       </div>
       );
     }
